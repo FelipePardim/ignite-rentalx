@@ -2,6 +2,17 @@ import { Router } from "express";
 
 const categoriesRoutes = Router();
 
-categoriesRoutes.post("/categories", (request, resopnse));
+const categories = [];
+
+categoriesRoutes.post("/categories", (request, response) => {
+  const { name, description } = request.body;
+
+  categories.push({
+    name,
+    description,
+  });
+
+  return response.status(201).send();
+});
 
 export { categoriesRoutes };
