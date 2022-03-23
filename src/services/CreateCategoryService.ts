@@ -12,7 +12,7 @@ class CreateCategoryService {
     const categoryAlreadyExists = this.categoriesRepostory.findByName(name);
 
     if (categoryAlreadyExists) {
-      throw new Error("Categoru already exists!");
+      throw new Error("Category already exists!");
     }
 
     this.categoriesRepostory.create({ name, description });
