@@ -11,7 +11,7 @@ app.use("/categories", categoriesRoutes);
 app.use("/specifications", specificationsRoutes);
 
 app.listen(3333, () => {
-  console.log("Server Running!");
+  console.log("🟢 Server Running!");
 
   app.post("/courses", (request, response) => {
     const { name } = request.body;
