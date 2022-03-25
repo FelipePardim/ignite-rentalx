@@ -9,9 +9,4 @@ app.use(router);
 
 app.listen(3333, () => {
   console.log("🟢 Server Running!");
-
-  app.post("/courses", (request, response) => {
-    const { name } = request.body;
-    return response.json({ name });
-  });
 });
